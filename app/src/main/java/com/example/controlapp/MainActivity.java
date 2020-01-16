@@ -49,7 +49,9 @@ DatabaseReference cond2=mRootRef.child("Temperature");
         cond2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Temperature.setText(dataSnapshot.getValue(String.class)+ "'C");
+
+                int n=(dataSnapshot.getValue(Integer.class));
+                Temperature.setText(Integer.toString(n)+"'C");
             }
 
             @Override
@@ -60,8 +62,8 @@ DatabaseReference cond2=mRootRef.child("Temperature");
         cond1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                 Humidity.setText(dataSnapshot.getValue(String.class)+"%");
+                int n=(dataSnapshot.getValue(Integer.class));
+                 Humidity.setText(Integer.toString(n));
             }
 
             @Override

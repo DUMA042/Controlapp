@@ -20,7 +20,7 @@ public class Main2Activity extends AppCompatActivity {
     DatabaseReference device_air_con=mRootRef.child("aircon");
     DatabaseReference device_oven=mRootRef.child("oven");
     DatabaseReference device_charger=mRootRef.child("charger");
-    String Temp_check;
+    int  Temp_check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,6 @@ public class Main2Activity extends AppCompatActivity {
         air_con=findViewById(R.id.switch2);
         oven=findViewById(R.id.switch3);
         charger=findViewById(R.id.switch4);
-        //mRootRef
 
 
 
@@ -41,11 +40,12 @@ public class Main2Activity extends AppCompatActivity {
                 //  Log.v("Switch State=", ""+isChecked);
                 if(isChecked){
                     bulb.setText("ON");
-                    device_bulb.setValue("1");
+                   device_bulb.setValue(1);
                 }
                 else{
                     bulb.setText("OFF");
-                device_bulb.setValue("0");}
+                device_bulb.setValue(0);
+                }
 
             }
 
@@ -58,11 +58,12 @@ public class Main2Activity extends AppCompatActivity {
                 //  Log.v("Switch State=", ""+isChecked);
                 if(isChecked){
                     oven.setText("ON");
-                    device_oven.setValue("1");
+                    device_oven.setValue(1);
                 }
                 else{
                     oven.setText("OFF");
-                device_oven.setValue("0");}
+                device_oven.setValue(0);
+                }
             }
 
         });
@@ -75,11 +76,12 @@ public class Main2Activity extends AppCompatActivity {
                 //  Log.v("Switch State=", ""+isChecked);
                 if(isChecked){
                     charger.setText("ON");
-                    device_charger.setValue("1");
+                   device_charger.setValue(1);
                 }
                 else{
                     charger.setText("OFF");
-                device_charger.setValue("0");}
+                device_charger.setValue(0);
+                    }
             }
 
         });
@@ -91,12 +93,13 @@ public class Main2Activity extends AppCompatActivity {
                 //  Log.v("Switch State=", ""+isChecked);
                 if(isChecked){
                     air_con.setText("ON");
-                    device_air_con.setValue("1");
+                    device_air_con.setValue(1);
 
                 }
                 else{
                     air_con.setText("OFF");
-                device_air_con.setValue("0");}
+                device_air_con.setValue(0);
+                }
             }
 
         });
@@ -110,8 +113,8 @@ public class Main2Activity extends AppCompatActivity {
         device_bulb.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Temp_check=dataSnapshot.getValue(String.class);
-                if(Temp_check.equals("1")){
+                Temp_check=dataSnapshot.getValue(Integer.class);
+                if(Temp_check==1){
                     bulb.setText("ON");
                 }
                 else
@@ -127,8 +130,8 @@ public class Main2Activity extends AppCompatActivity {
         device_air_con.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Temp_check=dataSnapshot.getValue(String.class);
-                if(Temp_check.equals("1")){
+                Temp_check=dataSnapshot.getValue(Integer.class);
+                if(Temp_check==1){
                     air_con.setText("ON");
                 }
                 else
@@ -144,8 +147,8 @@ public class Main2Activity extends AppCompatActivity {
         device_charger.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Temp_check=dataSnapshot.getValue(String.class);
-                if(Temp_check.equals("1")){
+                Temp_check=dataSnapshot.getValue(Integer.class);
+                if(Temp_check==1){
                     charger.setText("ON");
                 }
                 else
@@ -161,8 +164,8 @@ public class Main2Activity extends AppCompatActivity {
         device_oven.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Temp_check=dataSnapshot.getValue(String.class);
-                if(Temp_check.equals("1")){
+                Temp_check=dataSnapshot.getValue(Integer.class);
+                if(Temp_check==1){
                     oven.setText("ON");
                 }
                 else

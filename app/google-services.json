@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "234620301083",
+    "firebase_url": "https://controlapp-b809f.firebaseio.com",
+    "project_id": "controlapp-b809f",
+    "storage_bucket": "controlapp-b809f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234620301083:android:d8f2883b5eb4f092fb6dbe",
+        "android_client_info": {
+          "package_name": "com.example.controlapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234620301083-r3r3i0vvreqjhrm958sschoaqp6g9rh5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.controlapp",
+            "certificate_hash": "462a8ad972d282f51fd184c76d7ff2d3f034b045"
+          }
+        },
+        {
+          "client_id": "234620301083-trs8mkqn8f2ejbobqstncgrd4bdhbm17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgoj5wJGZkLjxkT-cGQdo4M5ziEKAEtI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234620301083-trs8mkqn8f2ejbobqstncgrd4bdhbm17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

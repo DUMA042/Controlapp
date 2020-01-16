@@ -43,7 +43,7 @@ public class Main2Activity extends AppCompatActivity {
                    device_bulb.setValue(1);
                 }
                 else{
-                    bulb.setText("OFF");
+                    bulb.setText("OF");
                 device_bulb.setValue(0);
                 }
 

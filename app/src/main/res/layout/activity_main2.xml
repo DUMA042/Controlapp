@@ -33,7 +33,8 @@
         android:layout_below="@+id/textView"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
-        android:text="Air Conditioner : " />
+        android:text="Air Conditioner : "
+        />
 
     <Switch
         android:id="@+id/switch2"
@@ -45,7 +46,8 @@
         android:layout_marginTop="28dp"
         android:layout_marginLeft="13dp"
         android:layout_toRightOf="@+id/textView2"
-        android:text="OFF" />
+        android:text="OFF"
+        />
 
     <TextView
         android:id="@+id/textView3"

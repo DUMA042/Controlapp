@@ -86,22 +86,17 @@ public class Main2Activity extends AppCompatActivity {
 
         });
 
-        air_con.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        air_con.setOnCheckedChangeListener((CompoundButton buttonView, boolean isChecked) -> {
+            //  Log.v("Switch State=", ""+isChecked);
+            if(isChecked){
+                air_con.setText("ON");
+                device_air_con.setValue(1);
 
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                //  Log.v("Switch State=", ""+isChecked);
-                if(isChecked){
-                    air_con.setText("ON");
-                    device_air_con.setValue(1);
-
-                }
-                else{
-                    air_con.setText("OFF");
-                device_air_con.setValue(0);
-                }
             }
-
+            else{
+                air_con.setText("OFF");
+            device_air_con.setValue(0);
+            }
         });
     }
 
@@ -116,9 +111,11 @@ public class Main2Activity extends AppCompatActivity {
                 Temp_check=dataSnapshot.getValue(Integer.class);
                 if(Temp_check==1){
                     bulb.setText("ON");
+                    bulb.setChecked(true);
                 }
                 else
                     bulb.setText("OFF");
+
             }
 
             @Override
@@ -133,6 +130,7 @@ public class Main2Activity extends AppCompatActivity {
                 Temp_check=dataSnapshot.getValue(Integer.class);
                 if(Temp_check==1){
                     air_con.setText("ON");
+                    air_con.setChecked(true);
                 }
                 else
                     air_con.setText("OFF");
@@ -150,9 +148,11 @@ public class Main2Activity extends AppCompatActivity {
                 Temp_check=dataSnapshot.getValue(Integer.class);
                 if(Temp_check==1){
                     charger.setText("ON");
+                    charger.setChecked(true);
                 }
                 else
                     charger.setText("OFF");
+
             }
 
             @Override
@@ -167,9 +167,11 @@ public class Main2Activity extends AppCompatActivity {
                 Temp_check=dataSnapshot.getValue(Integer.class);
                 if(Temp_check==1){
                     oven.setText("ON");
+                    oven.setChecked(true);
                 }
                 else
                     oven.setText("OFF");
+
             }
 
             @Override
